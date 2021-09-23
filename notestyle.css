@@ -1,0 +1,64 @@
+html {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0px auto;
+    border: 1px solid rgba(0,0,0,.05);
+}
+
+.title {
+    text-align: center;
+}
+
+.all-contents {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#note-section {
+    width: 70%;
+    padding-right: 20px;
+    box-sizing: border-box; /* MAKES 20PX PADDING ADDED TO 70% */
+}
+
+#user-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+}
+
+.notes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1.3rem;
+    background-color: black;
+    color:white;
+    margin-bottom: 20px;
+}
+
+
+button {
+    background-color: #0db45c;
+    color: white;
+}
+
+#submit-btn {
+    /*padding: top right bottom left;
+    padding: topbottom rightleft;
+    padding: top rightleft bottom;
+    padding: toprightleftbottom;*/
+    padding: 1rem 0px;
+}
+.ede-btns {
+    display: flex;
+}
