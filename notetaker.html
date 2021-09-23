@@ -17,12 +17,12 @@
 
             <div class="all-contents">
                 <div id="note-section">
-                    <div id="noteTextContainer0" class="notes" style="background: blue;">
+                    <div id="noteTextContainer0" class="notes" style="background: #8EB8FF;">
                         <p id="noteText0">This is my first note</p>
                         <div id="editContainer0"></div>
-                        <div class="ede-btns">
-                            <button onclick="editNote(0)">Edit</button> &nbsp;&nbsp;
-                            <button onclick="deleteNote(0)">Delete</button>
+                        <div class="edit-delete-btns">
+                            <button class="editBtn" onclick="editNote(0)">Edit</button> &nbsp;&nbsp;
+                            <button class="deleteBtn" onclick="deleteNote(0)">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -35,10 +35,12 @@
                     <label>CHOOSE A COLOR</label>
                     <div id="color-selector">
                         <select id="selectC" for="colors">
-                            <option value='red'>Red</option>
-                            <option value='blue'>Blue</option>
-                            <option value='pink'>Pink</option>
-                            <option value='black'>Black</option>
+                            <option value="#D1D1D1">Gray</option>
+                            <option value="#8EB8FF">Soft Blue</option>
+                            <option value="#FFD8D8">Soft Pink</option>
+                            <option value="#65FF36">Neon Green</option>
+                            <option value="#FFC00E">Gold</option>
+                            <option value="#C49CFF">Soft Purple</option>
                         </select>
                         <div id="submit-btn">
                             <button type='button' id="add-btn" onclick="addNote()">ADD NOTE</button>

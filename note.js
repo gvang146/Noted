@@ -20,7 +20,7 @@ function deleteNote(id) {
 function editNote(id) {
     document.getElementById('noteText'+id).style.display = 'none';
     let noteText = document.getElementById('noteText'+id).textContent;
-    let editString = '<textarea id="note-text'+id+'" type="text" rows="8" cols="60">'+noteText+'</textarea><br /><select id="selectC'+id+'" for="colors"><option value="red">Red</option><option value="blue">Blue</option><option value="pink">Pink</option><option value="black">Black</option></select><div class="save-btn"><button onclick="saveNote('+id+')">Save</button></div><br /><br />';
+    let editString = '<textarea id="note-text'+id+'" type="text" rows="8" cols="60">'+noteText+'</textarea><br /><select id="selectC'+id+'" for="colors"><option value="#D1D1D1">Gray</option><option value="#8EB8FF">Soft Blue</option><option value="#FFD8D8">Soft Pink</option><option value="#65FF36">Neon Green</option><option value="#FFC00E">Gold</option><option value="#C49CFF">Soft Purple</option></select><div class="save-btn"><button class="saveBtn" onclick="saveNote('+id+')">Save</button></div><br /><br />';
     let textbox = document.getElementById('editContainer'+id).innerHTML = editString;
     document.getElementById('noteTextContainer'+id).innerHTML = textbox;
 }
@@ -29,7 +29,7 @@ function saveNote(id) {
     let noteText = document.getElementById('note-text'+id).value;
     let noteColor = document.getElementById('selectC'+id).value;
     
-    let noteString = '<div id="noteTextContainer'+id+'" class="notes" style="background: '+noteColor+';"><p id="noteText'+id+'">'+noteText+'</p><div id="editContainer'+id+'"></div><div class="ede-btns"><button onclick="editNote('+id+')">Edit</button> &nbsp;&nbsp;<button onclick="deleteNote('+id+')">Delete</button></div></div>';
+    let noteString = '<div id="noteTextContainer'+id+'" class="edit-notes" style="background: '+noteColor+';"><p id="noteText'+id+'">'+noteText+'</p><div id="editContainer'+id+'"></div><div class="ede-btns"><button onclick="editNote('+id+')">Edit</button> &nbsp;&nbsp;<button onclick="deleteNote('+id+')">Delete</button></div></div>';
     document.getElementById('noteTextContainer'+id).style.backgroundColor = noteColor;
     document.getElementById('noteTextContainer'+id).innerHTML = noteString;
 }
