@@ -87,3 +87,10 @@ button {
     border: 2px solid #6AE977;
     border-radius: 10px;
 }
+.saveBtn {
+    cursor: pointer;
+    background-color: transparent;
+    color:  black;
+    border: 2px solid #6AE977;
+    border-radius: 10px;
+}

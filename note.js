@@ -7,7 +7,7 @@ function addNote() {
     if(noteText == "") {
         alert("Please add some notes");
     } else {  
-    let noteString = '<div id="noteTextContainer'+noteCount+'" class="notes" style="background: '+noteBGColor+';"><p id="noteText'+noteCount+'">'+noteText+'</p><div id="editContainer'+noteCount+'"></div><div class="ede-btns"><button onclick="editNote('+noteCount+')">Edit</button> &nbsp;&nbsp;<button onclick="deleteNote('+noteCount+')">Delete</button></div></div>';
+    let noteString = '<div id="noteTextContainer'+noteCount+'" class="notes" style="background: '+noteBGColor+';"><p id="noteText'+noteCount+'">'+noteText+'</p><div id="editContainer'+noteCount+'"></div><div class="ede-btns"><button class="editBtn" onclick="editNote('+noteCount+')">Edit</button> &nbsp;&nbsp;<button class="deleteBtn" onclick="deleteNote('+noteCount+')">Delete</button></div></div>';
     document.getElementById('note-section').innerHTML += noteString;
     }
 }
@@ -29,7 +29,7 @@ function saveNote(id) {
     let noteText = document.getElementById('note-text'+id).value;
     let noteColor = document.getElementById('selectC'+id).value;
     
-    let noteString = '<div id="noteTextContainer'+id+'" class="edit-notes" style="background: '+noteColor+';"><p id="noteText'+id+'">'+noteText+'</p><div id="editContainer'+id+'"></div><div class="ede-btns"><button onclick="editNote('+id+')">Edit</button> &nbsp;&nbsp;<button onclick="deleteNote('+id+')">Delete</button></div></div>';
+    let noteString = '<div id="noteTextContainer'+id+'" class="edit-notes" style="background: '+noteColor+';"><p id="noteText'+id+'">'+noteText+'</p><div id="editContainer'+id+'"></div><div class="ede-btns"><button class="editBtn" onclick="editNote('+id+')">Edit</button> &nbsp;&nbsp;<button class="deleteBtn" onclick="deleteNote('+id+')">Delete</button></div></div>';
     document.getElementById('noteTextContainer'+id).style.backgroundColor = noteColor;
     document.getElementById('noteTextContainer'+id).innerHTML = noteString;
 }
